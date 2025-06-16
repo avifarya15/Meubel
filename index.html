@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meubel Manado - Furniture Berkualitas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #A0522D;
+            --light-color: #F5DEB3;
+            --dark-color: #5C4033;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--dark-color);
+        }
+        
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        
+        .nav-link:hover {
+            color: var(--light-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light-color);
+        }
+        
+        .about-img {
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .team-card {
+            border: none;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--light-color);
+            margin: 0 auto 15px;
+        }
+        
+        .team-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .team-position {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chair me-2"></i>Meubel Manado
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Tim Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Meubel Manado From Huntap Tondo</h1>
+            <p class="lead mb-5">Produk furniture handmade dengan bahan kayu pilihan dan pengerjaan profesional</p>
+            <a href="#products" class="btn btn-primary btn-lg px-4">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Tentang Kami</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92" alt="Tentang Kami" class="img-fluid about-img">
+                </div>
+                <div class="col-lg-6">
+                    <h3>Meubel Manado - Furnitur pilihan terbaik</h3>
+                    <p style="text-align: justify;">
+                        Meubel ini dibangun tepat pada tanggal 07 Agustus 2023 oleh seorang pria bernama Harni Tambuwun. Seorang pekerja yang sempat terkena PHK dari perusahaan di karenakan tragedi COVID-19 pada tahun 2020. Untuk melanjutkan hidup, beliau berniat membangun meubel dengan sisa tabungan yang ada untuk investasi kedepannya.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Bahan kayu berkualitas</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Pengerjaan oleh pengrajin berpengalaman</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Berbagai jenis kerajinan dan variasi warna</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Buat desain sesuai kebutuhan</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Ramah di kantong masyarakat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Produk Kami</h2>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 mt-4">
+                    <div class="product-card">
+                        <img src="/bahan gambar/1.jpg" class="img-fluid product-img" alt="Lemari">
+                        <div class="p-3">
+                            <h4>Lemari Dua Pintu</h4>
+                            <p>Lemari yang memiliki dua pintu dengan gaya yang khas. Tersedia dengan beberapa warna berbeda.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Rp 2.100.000,00</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-4 mt-4">
+                    <div class="product-card">
+                        <img src="bahan gambar/2.jpg" class="img-fluid product-img" alt="Meja Kompor">
+                        <div class="p-3">
+                            <h4>Meja Kompor</h4>
+                            <p>Meja yang di peruntukkan menaruh kompor gas dan memiliki ruang di bagian bawah meja.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Rp 200.000,00</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-4 mt-4">
+                    <div class="product-card">
+                        <img src="/bahan gambar/3.jpg" class="img-fluid product-img" alt="Meja Makan">
+                        <div class="p-3">
+                            <h4>Meja Makan 8 tehel</h4>
+                            <p>Meja makan yang dilengkapi dengan 6 set kursi. Memiliki beberapa vairan warna dan bentuk tehel.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Rp 1.500.000,00</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-md-4 mt-4">
+                    <div class="product-card">
+                        <img src="/bahan gambar/4.jpg" class="img-fluid product-img" alt="Meja">
+                        <div class="p-3">
+                            <h4>Meja Belajar</h4>
+                            <p>Meja yang bisa digunakan untuk belajar dengan pijakan kaki di bagian bawah. Tersedia beberapa warna.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Rp 150.000,00</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-md-4 mt-4">
+                    <div class="product-card">
+                        <img src="/bahan gambar/5.jpg" class="img-fluid product-img" alt="Lemari geser">
+                        <div class="p-3">
+                            <h4>Lemari Pintu geser</h4>
+                            <p>Lemari yang memiiki 2 ruang dan memiliki laci dibagian bawah. Tersedia beberapa varian warna.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Rp 3.500.000,00</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-md-4 mt-4">
+                    <div class="product-card">
+                        <img src="/bahan gambar/6.jpg" class="img-fluid product-img" alt="Meja Makan">
+                        <div class="p-3">
+                            <h4>Meja Makan 6 tehel</h4>
+                            <p>Meja makan dengan 4 set kursi, cocok untuk keluaraga baru menikah. Tersedia beberapa varian warna.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Rp 1.200.000,00</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Tim Kami</h2>
+            <div class="row justify-content-center">
+                <!-- Team Member 1 -->
+                <div class="col-md-4 col-lg-2">
+                    <div class="team-card">
+                        <img src="/bahan gambar/abdii.jpg" alt="Team Member" class="team-img">
+                        <h5 class="team-name">Muhammad Abdillah Fattah</h5>
+                        <p class="team-position">Stambuk: F52123080</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="col-md-4 col-lg-2">
+                    <div class="team-card">
+                        <img src="/bahan gambar/joshh.jpg" alt="Team Member" class="team-img">
+                        <h5 class="team-name">Joshua Riman Kape</h5>
+                        <p class="team-position">Stambuk: F52123092</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="col-md-4 col-lg-2">
+                    <div class="team-card">
+                        <img src="/bahan gambar/andin.jpg" alt="Team Member" class="team-img">
+                        <h5 class="team-name">Andini Artika Ridwan</h5>
+                        <p class="team-position">Stambuk: 72150003</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="col-md-4 col-lg-2">
+                    <div class="team-card">
+                        <img src="/bahan gambar/aviff.jpg" alt="Team Member" class="team-img">
+                        <h5 class="team-name">Muh Avif Arya Manggona</h5>
+                        <p class="team-position">Stambuk: F52123073</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 5 -->
+                <div class="col-md-4 col-lg-2">
+                    <div class="team-card">
+                        <img src="/bahan gambar/ucuppp 2.jpg" alt="Team Member" class="team-img">
+                        <h5 class="team-name">Muh Yusuf</h5>
+                        <p></p>
+                        <p class="team-position">Stambuk: F52123095</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Hubungi Kami</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Informasi Kontak</h3>
+                    <p>Silakan hubungi kami untuk informasi produk, pemesanan, atau kunjungan ke showroom.</p>
+                    
+                    <div class="contact-info mt-4">
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Alamat:</strong> Jl. RE. Martadinata, Kec. Mantikulore, Kota Palu, Sulawesi Tengah</p>
+                        <p><i class="fas fa-phone"></i> <strong>Telepon:</strong> 0852-1321-8878</p>
+                        <p><i class="fas fa-mobile-alt"></i> <strong>WhatsApp:</strong> +62 852 1321 8878</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> meubelManado@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> <strong>Jam Operasional:</strong> Senin-Minggu, 08:00 - 17:00 WITA</p>
+                    </div>
+                    
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h3>Kirim Pesan</h3>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Nomor Telepon">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select">
+                                <option selected disabled>Pilih Subjek</option>
+                                <option>Pertanyaan Produk</option>
+                                <option>Kunjungan</option>
+                                <option>Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Meubel Manado</h5>
+                    <p>Spesialis furniture kayu berkualitas dengan pengerjaan profesional dan harga kompetitif.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Kembali ke atas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#about" class="text-white">Tentang Kami</a></li>
+                        <li><a href="#products" class="text-white">Produk</a></li>
+                        <li><a href="#team" class="text-white">Tim Kami</a></li>
+                        <li><a href="#contact" class="text-white">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Berlangganan untuk mendapatkan info produk terbaru dan promo.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email Anda">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <p class="mb-0">&copy; 2025 Meubel Manado. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
